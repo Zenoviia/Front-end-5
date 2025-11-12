@@ -1,11 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Лабораторна робота — форма</title>
+  </head>
+  <body>
+    <form id="userForm">
+      <h2>Анкета</h2>
+
+      <label for="name">ПІБ:</label>
+      <input type="text" id="name" placeholder="Ткаченко Т.Т." />
+
+      <label for="faculty">Факультет:</label>
+      <input type="text" id="faculty" placeholder="ФІОТ" />
+
+      <label for="birth">Дата народження:</label>
+      <input type="text" id="birth" placeholder="01.01.2000" />
+
+      <label for="address">Адреса:</label>
+      <input type="text" id="address" placeholder="м. Київ" />
+
+      <label for="email">E-mail:</label>
+      <input type="text" id="email" placeholder="example@abcde.com" />
+
+      <button type="button" onclick="validateForm()">Перевірити</button>
+    </form>
+
+  </body>
 </html>
