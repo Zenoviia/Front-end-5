@@ -43,3 +43,32 @@ function validateForm() {
     alert("Перевірте правильність полів");
   }
 }
+
+const variantNumber = 5;
+const table = document.getElementById("variantTable");
+
+for (let i = 0, num = 1; i < 6; i++) {
+  const tr = document.createElement("tr");
+  for (let j = 0; j < 6; j++, num++) {
+    const td = document.createElement("td");
+    td.textContent = num;
+
+    if (num === variantNumber) {
+      td.addEventListener("mouseenter", () => {
+        td.style.backgroundColor = getRandomColor();
+      });
+    }
+
+    tr.appendChild(td);
+  }
+  table.appendChild(tr);
+}
+
+function getRandomColor() {
+  const letters = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
