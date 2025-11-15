@@ -10,28 +10,73 @@
     <div class="container">
       <form id="userForm">
         <h2>Анкета</h2>
-
         <label for="name">ПІБ:</label>
         <input type="text" id="name" placeholder="Ткаченко Т.Т." />
-
         <label for="faculty">Факультет:</label>
         <input type="text" id="faculty" placeholder="ФІОТ" />
-
         <label for="birth">Дата народження:</label>
         <input type="text" id="birth" placeholder="01.01.2000" />
-
         <label for="address">Адреса:</label>
         <input type="text" id="address" placeholder="м. Київ" />
-
         <label for="email">E-mail:</label>
         <input type="text" id="email" placeholder="example@abcde.com" />
-
         <button type="button" id="checkBtn">Перевірити</button>
       </form>
 
       <div id="table-wrapper">
         <h2>Таблиця</h2>
         <table id="variantTable"></table>
+      </div>
+    </div>
+
+    <div id="colorPickerModal" class="modal">
+      <div class="modal-content">
+        <h3>Вибір кольору</h3>
+        <div class="color-picker">
+          <div class="palette">
+            <canvas id="colorCanvas" width="200" height="100"></canvas>
+            <canvas id="hueCanvas" width="200" height="20"></canvas>
+          </div>
+          <div class="color-options">
+            <h4>Основні кольори</h4>
+            <div id="mainColors" class="color-grid"></div>
+            <h4>Додаткові кольори</h4>
+            <div id="customColors" class="color-grid"></div>
+          </div>
+          <div class="color-settings">
+            <label>Обраний колір: <span id="selectedColor"></span></label>
+            <label
+              >Відтінок:
+              <input type="number" id="hueInput" min="0" max="360" value="0"
+            /></label>
+            <label
+              >Контраст:
+              <input type="range" id="contrast" min="0" max="100" value="50"
+            /></label>
+            <label
+              >Яскравість:
+              <input type="range" id="brightness" min="0" max="100" value="50"
+            /></label>
+            <label
+              >Червоний:
+              <input type="number" id="red" min="0" max="255" value="255"
+            /></label>
+            <label
+              >Зелений:
+              <input type="number" id="green" min="0" max="255" value="0"
+            /></label>
+            <label
+              >Синій:
+              <input type="number" id="blue" min="0" max="255" value="0"
+            /></label>
+          </div>
+          <div class="color-actions">
+            <button id="addToCustom">Додати в набір</button>
+            <button id="pickColor">Визначити колір</button>
+            <button id="okColor">OK</button>
+            <button id="cancelColor">Відміна</button>
+          </div>
+        </div>
       </div>
     </div>
 
